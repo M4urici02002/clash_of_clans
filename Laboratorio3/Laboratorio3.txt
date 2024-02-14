@@ -1,0 +1,17 @@
+- Uso de !important en CSS: 
+Se recomienda usar !important con mucha precaución. 
+Aunque puede ser útil para sobreescribir estilos específicos en situaciones complejas, su uso excesivo puede hacer que el mantenimiento del código sea más difícil, 
+ya que rompe la cascada natural de las hojas de estilo y puede llevar a conflictos de estilos difíciles de depurar.
+
+- Selección de imágenes de fondo: 
+Las imágenes de fondo deben elegirse cuidadosamente para asegurar que no distraigan ni entorpezcan la legibilidad del texto sobre ellas. 
+Además, el tamaño del archivo es importante para no afectar negativamente el tiempo de carga de la página.
+
+- Elección de unidades en CSS: 
+
+ ~ % es útil para diseños responsivos que deben ajustarse a diferentes tamaños de pantalla.
+ ~ px es bueno para cuando necesitas precisión pixel-perfect.
+ ~ pt se usa menos en diseño web y es más relevante para la impresión.
+ ~ Se recomienda usar unidades relativas como %, em, o vw/vh para diseños flexibles y adaptativos.
+~ Uso de CSS minimizado: La versión minimizada del CSS mejora el rendimiento del sitio al reducir el tamaño del archivo, lo que disminuye el tiempo de carga de la página. 
+  Eliminar espacios, comentarios, y simplificar la notación sin cambiar la funcionalidad permite que los archivos se transfieran más rápidamente a través de la red.
