@@ -1,0 +1,55 @@
+- Diferencia entre Internet y la World Wide Web: 
+Internet es una red global de redes que conecta computadoras en todo el mundo, permitiendo la comunicación y el intercambio de datos. 
+La World Wide Web (WWW) es un sistema de información donde los documentos y otros recursos web son identificados por URLs, interconectados por enlaces hipertexto, y accesibles a través de Internet.
+
+- Partes de un URL: Un URL (Uniform Resource Locator):
+Consta de varias partes: el esquema (protocolo), el nombre de dominio (y a veces el puerto), el path (ruta al recurso específico dentro del dominio), y opcionalmente, el query string (para enviar datos al servidor) y el fragmento (para identificar una parte interna del documento).
+
+- Propósito de los métodos HTTP:
+GET: Solicitar datos de un recurso especificado.
+HEAD: Similar a GET pero solo solicita los headers de respuesta, útil para verificar existencia o modificar metadatos.
+POST: Enviar datos al servidor para crear o actualizar un recurso.
+PUT: Reemplazar todos los datos actuales de un recurso especificado.
+PATCH: Modificar parcialmente un recurso.
+DELETE: Eliminar un recurso especificado.
+
+- Método HTTP al enviar un formulario: 
+Al enviar un formulario con usuario y contraseña, se debe utilizar POST, ya que este método permite enviar datos sensibles de manera segura en el cuerpo de la solicitud, 
+evitando que estos datos se expongan en la URL.
+
+- Método HTTP al acceder a una página a través de un URL: 
+Al acceder a una página a través de un navegador web, se utiliza el método GET, ya que este método solicita la representación de un recurso especificado.
+
+- Código 200 en respuesta HTTP: 
+Indica éxito. Significa que la solicitud fue recibida, entendida, y procesada correctamente. 
+No ocurrió ningún error.
+
+- Error 404: 
+Sí, es responsabilidad del desarrollador corregirlo. 
+El error 404 indica que el recurso solicitado no se encuentra en el servidor, lo cual podría deberse a un enlace roto o un error en la dirección URL proporcionada, aspectos que el desarrollador debe solucionar.
+
+- Error 500: 
+También es responsabilidad del desarrollador corregirlo. 
+Este error indica un problema interno del servidor, sugiriendo que algo falló al procesar la solicitud, lo cual requiere revisión y corrección en el lado del servidor.
+
+- Atributos HTML5 depreciados o desaprobados: 
+Significa que esos atributos ya no se recomiendan para uso futuro, ya que han sido reemplazados por mejores prácticas o tecnologías más nuevas. 
+Ejemplos incluyen <font>, <center>, <frame>, y <frameset>.
+
+- Diferencias principales entre HTML 4 y HTML5: 
+HTML5 introduce nuevas etiquetas semánticas (como <article>, <section>, <nav>, <header>, <footer>), 
+soporte mejorado para multimedia (con <video> y <audio>), y nuevas funcionalidades como formularios mejorados, APIs para dibujo (canvas), soporte offline, almacenamiento local, y más.
+
+- Componentes de estructura y estilo de una tabla:
+Una tabla se compone de <table> para el contenedor, <tr> para las filas, <th> para los encabezados de columna, y <td> para las celdas. 
+El estilo se puede añadir con atributos como border, width, height, y mediante CSS.
+
+- Principales controles de un formulario HTML5: 
+Incluyen <input> (con tipos como text, password, email, number), <textarea>, <button>, <select>, <option>, <fieldset>, <legend>, y nuevos tipos de <input> como date, time, range, color.
+
+- Soporte HTML5 del navegador: 
+El nivel de soporte de HTML5 varía entre navegadores. 
+Para verificar el soporte específico, puedes visitar http://html5test.com/ y comprobar el soporte de tu navegador.
+
+- Ciclo de vida de los sistemas de información y desarrollo de sistemas: 
+El ciclo de vida de los sistemas de información abarca etapas como la planificación, análisis, diseño, implementación, pruebas, mantenimiento, y evaluación. El ciclo de desarrollo de sistemas de información sigue fases similares pero se enfoca más en el aspecto técnico y de desarrollo de software
