@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Validador de Contraseñas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="password">
+        <section id = 'passwordValidation'>
+            <div class="field">
+                <label for="password">Contraseña:</label> <br>
+                <input type="password" id="password" name="password" required placeholder = "example ********"> <br>
+            </div>
+        </div>
+        <div class="field">
+            <label for="confirmPassword">Confirmar Contraseña:</label> <br><br> 
+            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder= "example: ********" > <br>
+            </div>
+        </div>
+        <span id="validationMessage"></span><br>
+        <button type="button" onclick="validatePassword()">Validar Contraseña</button>
+      </form>
+        </section>
+    <script src="Laboratorio6.js"></script>
+</body>
+</html>
