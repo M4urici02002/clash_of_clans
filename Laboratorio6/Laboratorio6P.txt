@@ -1,0 +1,10 @@
+Validación en el cliente con JavaScript mejora la experiencia del usuario al proporcionar retroalimentación inmediata antes de enviar datos al servidor, 
+reduciendo la carga del servidor y el tráfico de red innecesario.
+
+Saltarse validaciones de JavaScript es posible deshabilitando JavaScript en el navegador, 
+modificando el código JavaScript a través de herramientas de desarrollo, o enviando datos directamente al servidor, 
+evitando las validaciones del lado del cliente.
+
+A pesar de que las validaciones de JavaScript pueden ser omitidas, 
+siguen siendo una buena práctica porque mejoran la usabilidad y eficiencia del lado del cliente. 
+Sin embargo, por seguridad y para garantizar la integridad de los datos, siempre deben complementarse con validaciones del lado del servidor.
