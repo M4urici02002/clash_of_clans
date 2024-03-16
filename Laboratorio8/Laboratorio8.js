@@ -150,10 +150,4 @@ const server = http.createServer((request, response) => {
 });
 
 const PORT = 9000;
-<<<<<<< HEAD
 server.listen(PORT);
-=======
-server.listen(PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
-});
->>>>>>> c5f5b581c1a1192df035ddf495219108e1fca75b
