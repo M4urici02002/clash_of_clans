@@ -1,0 +1,27 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Available Books</h1>
+<div class="columns is-multiline">
+  <% books.forEach(book => { %>
+    <div class="column is-one-quarter">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="<%= book.image %>" alt="Cover of <%= book.title %>">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media-content">
+            <p class="title is-4"><%= book.title %></p>
+            <p class="subtitle is-6">by <%= book.author %></p>
+          </div>
+          <div class="content">
+            <%= book.description %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+<%- include('includes/foot.ejs') %>

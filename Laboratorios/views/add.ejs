@@ -1,0 +1,25 @@
+<%- include('includes/head.ejs') %>
+<h2 class="title">Añadir un nuevo libro</h2>
+<form action="/add" method="POST">
+    <div class="field">
+        <label class="label" for="title">Título</label>
+        <input class="input" id="title" name="title" type="text" required>
+    </div>
+    <div class="field">
+        <label class="label" for="author">Autor</label>
+        <input class="input" id="author" name="author" type="text" required>
+    </div>
+    <div class="field">
+        <label class="label" for="description">Descripción</label>
+        <textarea class="textarea" id="description" name="description" required></textarea>
+    </div>
+    <div class="field">
+        <label class="label" for="image">URL de la Imagen</label>
+        <input class="input" id="image" name="image" type="text" required>
+    </div>
+    <br>
+    <div class="control">
+        <button class="button is-success" type="submit">Añadir Libro</button>
+    </div>
+</form>
+<%- include('includes/foot.ejs') %>
