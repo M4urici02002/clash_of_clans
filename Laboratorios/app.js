@@ -1,42 +1,52 @@
 const express = require('express');
 const path = require('path');
-require('dotenv').config(); // Cargar variables de entorno desde un archivo .env
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
+// Crea una instancia de Express
 const app = express();
 
 // Configura EJS como el motor de plantillas
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-// Middleware para procesar datos de formulario y JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// Configura el middleware para manejar sesiones
+app.use(session({
+  secret: 'mi string secreto que debe ser un string aleatorio muy largo, no como éste',
+  resave: false, // La sesión no se guardará en cada petición, sino sólo se guardará si algo cambió 
+  saveUninitialized: false, // Asegura que no se guarde una sesión para una petición que no lo necesita
+}));
 
-// Servir archivos estáticos desde la carpeta 'public'
-// Asegúrate de tener una carpeta 'public' en la raíz de tu proyecto
+// Middleware para servir archivos estáticos desde la carpeta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware de ejemplo para mostrar cómo funciona
+// Configura body-parser para procesar los datos enviados por POST
+app.use(bodyParser.urlencoded({extended: false}));
+
+// Configura cookie-parser para manejar cookies
+app.use(cookieParser());
+
+// Middleware de ejemplo para mostrar cómo funciona el middleware en Express
 app.use((request, response, next) => {
-    console.log('Middleware!');
-    next(); // Permite a la petición avanzar hacia el siguiente middleware en la cadena
+  console.log('Middleware!');
+  next(); // Permite a la petición avanzar hacia el siguiente middleware
 });
 
-// Importa las rutas de libros
-const rutasLibros = require('./routes/libros.routes');
+// Importa y usa las rutas de usuarios y libros
+const rutasUsuarios = require('./routes/users.routes');
+const rutasLibros = require('./routes/libros.routes'); // Asegúrate de que este nombre coincida con el nombre del archivo en tu proyecto
 
-// Usa las rutas de libros como middleware, asociándolas a la raíz '/'
-app.use('/', rutasLibros);
+// Usa las rutas de usuarios y libros como middleware, asociándolas a sus respectivas rutas
+app.use('/users', rutasUsuarios);
+app.use('/', rutasLibros); // Aquí se corrige para usar rutasLibros en lugar de rutasClases
 
-// Middleware para manejar errores 404, enviando una página específica
-app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+// Middleware para manejar errores 404, enviando el archivo 404.html
+app.use((request, response, next) => {
+  response.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
-// Define el puerto desde una variable de entorno o usa 3000 por defecto
-const port = process.env.PORT || 3000;
-
-// Inicia el servidor en el puerto configurado
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
+// Inicia el servidor en el puerto 3000
+app.listen(3000, () => {
+  console.log('Servidor corriendo en http://localhost:3000');
 });
